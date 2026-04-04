@@ -124,6 +124,7 @@ const Hero = () => {
               className="text-lg md:text-xl text-primary dark:text-primary-light font-semibold"
             >
               Hi, I'm
+              {/* <span className="text-orange-400">$</span> whoami */}
             </motion.p>
 
             {/* Name */}
