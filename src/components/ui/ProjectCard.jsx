@@ -20,7 +20,7 @@ const ProjectCard = ({ project, index }) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className=" object-cover transition-transform duration-500 group-hover:scale-110"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">
@@ -104,7 +104,10 @@ const ProjectCard = ({ project, index }) => {
 
         {/* View Details Button */}
         <button
-          onClick={() => navigate(`/project/${project.id}`)}
+          onClick={() => {
+            navigate(`/project/${project.id}`);
+            window.scrollTo(0, 0);
+          }}
           className="w-full mt-4 text-primary dark:text-primary-light font-semibold hover:underline text-sm"
         >
           View Details →

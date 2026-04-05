@@ -1,8 +1,8 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { FiArrowLeft, FiGithub, FiExternalLink } from 'react-icons/fi';
-import { getProjectById } from '@/data/projects';
-import Button from '@/components/common/Button';
+import { useParams, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FiArrowLeft, FiGithub, FiExternalLink } from "react-icons/fi";
+import { getProjectById } from "@/data/projects";
+import Button from "@/components/common/Button";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -16,9 +16,7 @@ const ProjectDetails = () => {
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Project Not Found
           </h1>
-          <Button onClick={() => navigate('/')}>
-            Back to Home
-          </Button>
+          <Button onClick={() => navigate("/")}>Back to Home</Button>
         </div>
       </div>
     );
@@ -31,7 +29,7 @@ const ProjectDetails = () => {
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
           className="flex items-center gap-2 text-primary dark:text-primary-light hover:underline mb-8"
         >
           <FiArrowLeft /> Back to Projects
@@ -46,9 +44,15 @@ const ProjectDetails = () => {
           {/* Project Image */}
           <div className="h-96 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
             {project.image ? (
-              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
             ) : (
-              <div className="text-6xl gradient-text font-bold">{project.title.charAt(0)}</div>
+              <div className="text-6xl gradient-text font-bold">
+                {project.title.charAt(0)}
+              </div>
             )}
           </div>
 
@@ -65,16 +69,18 @@ const ProjectDetails = () => {
                     {project.category}
                   </span>
                   <span className="text-gray-500 dark:text-gray-400">•</span>
-                  <span className="text-gray-600 dark:text-gray-400">{project.year}</span>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    {project.year}
+                  </span>
                 </div>
               </div>
-              
+
               <div className="flex gap-3">
                 {project.liveLink && (
                   <Button
                     variant="primary"
                     icon={<FiExternalLink />}
-                    onClick={() => window.open(project.liveLink, '_blank')}
+                    onClick={() => window.open(project.liveLink, "_blank")}
                   >
                     Live Demo
                   </Button>
@@ -83,7 +89,7 @@ const ProjectDetails = () => {
                   <Button
                     variant="outline"
                     icon={<FiGithub />}
-                    onClick={() => window.open(project.githubLink, '_blank')}
+                    onClick={() => window.open(project.githubLink, "_blank")}
                   >
                     View Code
                   </Button>
@@ -93,7 +99,9 @@ const ProjectDetails = () => {
 
             {/* Description */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">About the Project</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                About the Project
+              </h2>
               <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                 {project.description}
               </p>
@@ -101,10 +109,15 @@ const ProjectDetails = () => {
 
             {/* Features */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Key Features</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Key Features
+              </h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
+                  >
                     <span className="text-primary mt-1">✓</span>
                     <span>{feature}</span>
                   </li>
@@ -114,7 +127,9 @@ const ProjectDetails = () => {
 
             {/* Tech Stack */}
             <div className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Technologies Used</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Technologies Used
+              </h2>
               <div className="flex flex-wrap gap-3">
                 {project.techStack.map((tech, index) => (
                   <span
@@ -130,7 +145,9 @@ const ProjectDetails = () => {
             {/* Challenges */}
             {project.challenges && (
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Challenges & Solutions</h2>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  Challenges & Solutions
+                </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   {project.challenges}
                 </p>

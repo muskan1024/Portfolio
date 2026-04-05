@@ -229,7 +229,7 @@ const About = () => {
   useEffect(() => {
     if (isVisible) {
       animatedStats.forEach((stat, index) => {
-        animateValue(0, stat.value, 2000, (value) => {
+        animateValue(0, stat.value, 800, (value) => {
           setAnimatedStats((prev) => {
             const newStats = [...prev];
             newStats[index] = { ...newStats[index], currentValue: value };
@@ -318,7 +318,7 @@ const About = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  transition={{ delay: 0.1 }}
                   whileHover={{ y: -5 }}
                   className="p-6 bg-gradient-to-br from-primary/10 to-secondary/10 
                      dark:from-primary/20 dark:to-secondary/20 
