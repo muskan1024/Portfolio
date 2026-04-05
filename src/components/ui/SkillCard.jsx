@@ -24,7 +24,10 @@ const SkillCard = ({ skill, index }) => {
       {/* Glow Effect on Hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      <div className="relative z-10 flex flex-col items-center text-center space-y-4">
+      <div
+        className="relative z-10 flex flex-col items-center text-center space-y-4"
+        // onClick={() => window.open(skill.link, "_blank")}
+      >
         {/* Icon */}
         <div
           className="transition-transform duration-300 group-hover:scale-110"

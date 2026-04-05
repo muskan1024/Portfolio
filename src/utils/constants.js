@@ -24,7 +24,7 @@ export const SITE_INFO = {
   name: "Muskan Shaikh",
   title: "DevOps Engineer & Full Stack Developer",
   tagline:
-    "Passionate about automation, cloud infrastructure, and building scalable applications",
+    "Passionate about automation, cloud infrastructure, and designing & building scalable applications",
   description:
     "MCA (AI & ML) student and aspiring DevOps engineer with expertise in full-stack web development using MERN stack, Docker, Kubernetes, and CI/CD pipelines.",
 };

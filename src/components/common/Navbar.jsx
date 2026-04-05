@@ -66,7 +66,7 @@ const Navbar = () => {
             className="text-2xl font-bold cursor-pointer gradient-text"
             onClick={() => handleNavClick("#home")}
           >
-            <span className="gradient-text text-[#d98f07]">M.S</span>
+            <span className="gradient-text">M.S</span>
           </motion.div>
 
           {/* Desktop Navigation */}

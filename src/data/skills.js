@@ -1,256 +1,275 @@
 export const skills = {
   devops: [
-    { 
-      name: "Docker", 
-      icon: "FaDocker", 
-      level: "Intermediate", 
+    // {
+    //   name: "Docker",
+    //   icon: "FaDocker",
+    //   level: "Intermediate",
+    //   category: "DevOps",
+    //   color: "#2496ED"
+    // },
+    // {
+    //   name: "Kubernetes",
+    //   icon: "SiKubernetes",
+    //   level: "Beginner",
+    //   category: "DevOps",
+    //   color: "#326CE5"
+    // },
+    // {
+    //   name: "Jenkins",
+    //   icon: "SiJenkins",
+    //   level: "Intermediate",
+    //   category: "DevOps",
+    //   color: "#D24939"
+    // },
+    // {
+    //   name: "GitHub Actions",
+    //   icon: "SiGithubactions",
+    //   level: "Intermediate",
+    //   category: "DevOps",
+    //   color: "#2088FF"
+    // },
+    // {
+    //   name: "Terraform",
+    //   icon: "SiTerraform",
+    //   level: "Beginner",
+    //   category: "DevOps",
+    //   color: "#7B42BC"
+    // },
+    // {
+    //   name: "Ansible",
+    //   icon: "SiAnsible",
+    //   level: "Beginner",
+    //   category: "DevOps",
+    //   color: "#EE0000"
+    // },
+    {
+      name: "AWS",
+      icon: "FaAws",
+      level: "Intermediate",
       category: "DevOps",
-      color: "#2496ED"
+      color: "#FF9900",
+      link: "https://docs.aws.amazon.com/",
     },
-    { 
-      name: "Kubernetes", 
-      icon: "SiKubernetes", 
-      level: "Beginner", 
+    {
+      name: "Linux",
+      icon: "FaLinux",
+      level: "Intermediate",
       category: "DevOps",
-      color: "#326CE5"
+      color: "#FCC624",
+      link: "https://www.kernel.org/doc/html/latest/",
     },
-    { 
-      name: "Jenkins", 
-      icon: "SiJenkins", 
-      level: "Intermediate", 
+    {
+      name: "Bash",
+      icon: "FaCode",
+      level: "Beginner",
       category: "DevOps",
-      color: "#D24939"
+      color: "#FCC624",
+      link: "https://www.gnu.org/software/bash/manual/",
     },
-    { 
-      name: "GitHub Actions", 
-      icon: "SiGithubactions", 
-      level: "Intermediate", 
+    {
+      name: "Networking",
+      icon: "FaNetworkWired",
+      level: "Beginner",
       category: "DevOps",
-      color: "#2088FF"
-    },
-    { 
-      name: "Terraform", 
-      icon: "SiTerraform", 
-      level: "Beginner", 
-      category: "DevOps",
-      color: "#7B42BC"
-    },
-    { 
-      name: "Ansible", 
-      icon: "SiAnsible", 
-      level: "Beginner", 
-      category: "DevOps",
-      color: "#EE0000"
-    },
-    { 
-      name: "AWS", 
-      icon: "FaAws", 
-      level: "Intermediate", 
-      category: "DevOps",
-      color: "#FF9900"
-    },
-    { 
-      name: "Linux", 
-      icon: "FaLinux", 
-      level: "Intermediate", 
-      category: "DevOps",
-      color: "#FCC624"
+      color: "#4169E1",
+      link: "https://www.cloudflare.com/learning/",
     },
   ],
-  
+
   frontend: [
-    { 
-      name: "React", 
-      icon: "FaReact", 
-      level: "Advanced", 
+    {
+      name: "React",
+      icon: "FaReact",
+      level: "Advanced",
       category: "Frontend",
-      color: "#61DAFB"
+      color: "#61DAFB",
     },
-    { 
-      name: "JavaScript", 
-      icon: "SiJavascript", 
-      level: "Advanced", 
+    {
+      name: "JavaScript",
+      icon: "SiJavascript",
+      level: "Advanced",
       category: "Frontend",
-      color: "#F7DF1E"
+      color: "#F7DF1E",
     },
-    { 
-      name: "TailwindCSS", 
-      icon: "SiTailwindcss", 
-      level: "Advanced", 
+    {
+      name: "TailwindCSS",
+      icon: "SiTailwindcss",
+      level: "Advanced",
       category: "Frontend",
-      color: "#06B6D4"
+      color: "#06B6D4",
     },
-    { 
-      name: "HTML5", 
-      icon: "FaHtml5", 
-      level: "Advanced", 
+    {
+      name: "HTML5",
+      icon: "FaHtml5",
+      level: "Advanced",
       category: "Frontend",
-      color: "#E34F26"
+      color: "#E34F26",
     },
-    { 
-      name: "CSS3", 
-      icon: "FaCss3Alt", 
-      level: "Advanced", 
+    {
+      name: "CSS3",
+      icon: "FaCss3Alt",
+      level: "Advanced",
       category: "Frontend",
-      color: "#1572B6"
+      color: "#1572B6",
     },
-    { 
-      name: "Redux", 
-      icon: "SiRedux", 
-      level: "Intermediate", 
+    {
+      name: "Redux",
+      icon: "SiRedux",
+      level: "Intermediate",
       category: "Frontend",
-      color: "#764ABC"
+      color: "#764ABC",
     },
-    { 
-      name: "Next.js", 
-      icon: "SiNextdotjs", 
-      level: "Intermediate", 
+    {
+      name: "Next.js",
+      icon: "SiNextdotjs",
+      level: "Intermediate",
       category: "Frontend",
-      color: "#000000"
+      color: "#000000",
     },
   ],
-  
+
   backend: [
-    { 
-      name: "Node.js", 
-      icon: "FaNode", 
-      level: "Advanced", 
+    {
+      name: "Node.js",
+      icon: "FaNode",
+      level: "Advanced",
       category: "Backend",
-      color: "#339933"
+      color: "#339933",
     },
-    { 
-      name: "Express.js", 
-      icon: "SiExpress", 
-      level: "Advanced", 
+    {
+      name: "Express.js",
+      icon: "SiExpress",
+      level: "Advanced",
       category: "Backend",
-      color: "#000000"
+      color: "#000000",
     },
-    { 
-      name: "MongoDB", 
-      icon: "SiMongodb", 
-      level: "Advanced", 
+    {
+      name: "MongoDB",
+      icon: "SiMongodb",
+      level: "Advanced",
       category: "Backend",
-      color: "#47A248"
+      color: "#47A248",
     },
-    { 
-      name: "PostgreSQL", 
-      icon: "SiPostgresql", 
-      level: "Intermediate", 
+    // {
+    //   name: "PostgreSQL",
+    //   icon: "SiPostgresql",
+    //   level: "Intermediate",
+    //   category: "Backend",
+    //   color: "#4169E1",
+    // },
+    {
+      name: "REST API",
+      icon: "FaServer",
+      level: "Advanced",
       category: "Backend",
-      color: "#4169E1"
+      color: "#FF6C37",
     },
-    { 
-      name: "REST API", 
-      icon: "FaServer", 
-      level: "Advanced", 
-      category: "Backend",
-      color: "#FF6C37"
-    },
-    { 
-      name: "GraphQL", 
-      icon: "SiGraphql", 
-      level: "Beginner", 
-      category: "Backend",
-      color: "#E10098"
-    },
+    // {
+    //   name: "GraphQL",
+    //   icon: "SiGraphql",
+    //   level: "Beginner",
+    //   category: "Backend",
+    //   color: "#E10098",
+    // },
   ],
-  
+
   aiml: [
-    { 
-      name: "Python", 
-      icon: "FaPython", 
-      level: "Advanced", 
+    {
+      name: "Python",
+      icon: "FaPython",
+      level: "Advanced",
       category: "AI/ML",
-      color: "#3776AB"
+      color: "#3776AB",
     },
-    { 
-      name: "TensorFlow", 
-      icon: "SiTensorflow", 
-      level: "Intermediate", 
-      category: "AI/ML",
-      color: "#FF6F00"
-    },
-    { 
-      name: "PyTorch", 
-      icon: "SiPytorch", 
-      level: "Intermediate", 
-      category: "AI/ML",
-      color: "#EE4C2C"
-    },
-    { 
-      name: "Scikit-learn", 
-      icon: "SiScikitlearn", 
-      level: "Intermediate", 
-      category: "AI/ML",
-      color: "#F7931E"
-    },
-    { 
-      name: "Pandas", 
-      icon: "SiPandas", 
-      level: "Advanced", 
-      category: "AI/ML",
-      color: "#150458"
-    },
-    { 
-      name: "NumPy", 
-      icon: "SiNumpy", 
-      level: "Advanced", 
-      category: "AI/ML",
-      color: "#013243"
-    },
+    // {
+    //   name: "TensorFlow",
+    //   icon: "SiTensorflow",
+    //   level: "Intermediate",
+    //   category: "AI/ML",
+    //   color: "#FF6F00",
+    // },
+    // {
+    //   name: "PyTorch",
+    //   icon: "SiPytorch",
+    //   level: "Intermediate",
+    //   category: "AI/ML",
+    //   color: "#EE4C2C",
+    // },
+    // {
+    //   name: "Scikit-learn",
+    //   icon: "SiScikitlearn",
+    //   level: "Intermediate",
+    //   category: "AI/ML",
+    //   color: "#F7931E",
+    // },
+    // {
+    //   name: "Pandas",
+    //   icon: "SiPandas",
+    //   level: "Advanced",
+    //   category: "AI/ML",
+    //   color: "#150458",
+    // },
+    // {
+    //   name: "NumPy",
+    //   icon: "SiNumpy",
+    //   level: "Advanced",
+    //   category: "AI/ML",
+    //   color: "#013243",
+    // },
   ],
-  
+
   tools: [
-    { 
-      name: "Git", 
-      icon: "FaGitAlt", 
-      level: "Advanced", 
+    {
+      name: "Git",
+      icon: "FaGitAlt",
+      level: "Advanced",
       category: "Tools",
-      color: "#F05032"
+      color: "#F05032",
+      link: "https://github.com",
     },
-    { 
-      name: "GitHub", 
-      icon: "FaGithub", 
-      level: "Advanced", 
+    {
+      name: "GitHub",
+      icon: "FaGithub",
+      level: "Advanced",
       category: "Tools",
-      color: "#181717"
+      color: "#181717",
     },
-    { 
-      name: "VS Code", 
-      icon: "SiVisualstudiocode", 
-      level: "Advanced", 
+    {
+      name: "VS Code",
+      icon: "FaTerminal",
+      level: "Advanced",
       category: "Tools",
-      color: "#007ACC"
+      color: "#007ACC",
     },
-    { 
-      name: "Postman", 
-      icon: "SiPostman", 
-      level: "Advanced", 
+    {
+      name: "Postman",
+      icon: "SiPostman",
+      level: "Advanced",
       category: "Tools",
-      color: "#FF6C37"
+      color: "#FF6C37",
     },
-    { 
-      name: "Nginx", 
-      icon: "SiNginx", 
-      level: "Intermediate", 
+    {
+      name: "Nginx",
+      icon: "SiNginx",
+      level: "Intermediate",
       category: "Tools",
-      color: "#009639"
+      color: "#009639",
     },
-    { 
-      name: "Prometheus", 
-      icon: "SiPrometheus", 
-      level: "Beginner", 
-      category: "Tools",
-      color: "#E6522C"
-    },
-    { 
-      name: "Grafana", 
-      icon: "SiGrafana", 
-      level: "Beginner", 
-      category: "Tools",
-      color: "#F46800"
-    },
-  ]
+    // {
+    //   name: "Prometheus",
+    //   icon: "SiPrometheus",
+    //   level: "Beginner",
+    //   category: "Tools",
+    //   color: "#E6522C",
+    // },
+    // {
+    //   name: "Grafana",
+    //   icon: "SiGrafana",
+    //   level: "Beginner",
+    //   category: "Tools",
+    //   color: "#F46800",
+    // },
+  ],
 };
 
 // Get all skills as a flat array
@@ -260,30 +279,37 @@ export const getAllSkills = () => {
     ...skills.frontend,
     ...skills.backend,
     ...skills.aiml,
-    ...skills.tools
+    ...skills.tools,
   ];
 };
 
 // Get skills by category
 export const getSkillsByCategory = (category) => {
   const categoryMap = {
-    'DevOps': skills.devops,
-    'Frontend': skills.frontend,
-    'Backend': skills.backend,
-    'AI/ML': skills.aiml,
-    'Tools': skills.tools,
-    'All': getAllSkills()
+    DevOps: skills.devops,
+    Frontend: skills.frontend,
+    Backend: skills.backend,
+    "AI/ML": skills.aiml,
+    Tools: skills.tools,
+    All: getAllSkills(),
   };
-  
+
   return categoryMap[category] || [];
 };
 
 // Skill categories for filtering
-export const SKILL_CATEGORIES = ['All', 'DevOps', 'Frontend', 'Backend', 'AI/ML', 'Tools'];
+export const SKILL_CATEGORIES = [
+  "All",
+  "DevOps",
+  "Frontend",
+  "Backend",
+  "AI/ML",
+  "Tools",
+];
 
 // Proficiency levels with colors
 export const PROFICIENCY_LEVELS = {
-  'Beginner': { color: 'bg-yellow-500', width: '40%' },
-  'Intermediate': { color: 'bg-blue-500', width: '70%' },
-  'Advanced': { color: 'bg-green-500', width: '90%' },
+  Beginner: { color: "bg-yellow-500", width: "40%" },
+  Intermediate: { color: "bg-blue-500", width: "70%" },
+  Advanced: { color: "bg-green-500", width: "90%" },
 };
