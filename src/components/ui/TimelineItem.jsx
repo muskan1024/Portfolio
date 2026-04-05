@@ -1,5 +1,10 @@
-import { motion } from 'framer-motion';
-import { FaGraduationCap, FaBriefcase, FaRocket, FaLaptopCode } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import {
+  FaGraduationCap,
+  FaBriefcase,
+  FaRocket,
+  FaLaptopCode,
+} from "react-icons/fa";
 
 const TimelineItem = ({ experience, index, isLeft }) => {
   const icons = {
@@ -14,25 +19,29 @@ const TimelineItem = ({ experience, index, isLeft }) => {
       initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.2 }}
-      className={`relative flex ${isLeft ? 'md:flex-row-reverse' : 'md:flex-row'} items-center mb-8`}
+      transition={{ delay: index * 0.1 }}
+      className={`relative flex ${isLeft ? "md:flex-row-reverse" : "md:flex-row"} items-center mb-8`}
     >
       {/* Timeline Line & Dot */}
       <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:block">
-        <div className={`w-12 h-12 ${experience.color} rounded-full flex items-center justify-center text-white shadow-lg z-10`}>
+        <div
+          className={`w-12 h-12 ${experience.color} rounded-full flex items-center justify-center text-white shadow-lg z-10`}
+        >
           {icons[experience.type]}
         </div>
       </div>
 
       {/* Content Card */}
-      <div className={`w-full md:w-5/12 ${isLeft ? 'md:pr-12' : 'md:pl-12'}`}>
+      <div className={`w-full md:w-5/12 ${isLeft ? "md:pr-12" : "md:pl-12"}`}>
         <motion.div
           whileHover={{ scale: 1.02, y: -5 }}
           className="bg-white dark:bg-dark-light p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300"
         >
           {/* Duration & Type */}
           <div className="flex items-center gap-3 mb-3">
-            <div className={`md:hidden w-10 h-10 ${experience.color} rounded-full flex items-center justify-center text-white`}>
+            <div
+              className={`md:hidden w-10 h-10 ${experience.color} rounded-full flex items-center justify-center text-white`}
+            >
               {icons[experience.type]}
             </div>
             <span className="text-sm font-semibold text-primary dark:text-primary-light">
@@ -57,7 +66,10 @@ const TimelineItem = ({ experience, index, isLeft }) => {
           {experience.highlights && (
             <ul className="space-y-2 mb-4">
               {experience.highlights.map((highlight, i) => (
-                <li key={i} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+                <li
+                  key={i}
+                  className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2"
+                >
                   <span className="text-primary mt-1">•</span>
                   <span>{highlight}</span>
                 </li>

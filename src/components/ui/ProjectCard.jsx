@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiCode } from 'react-icons/fi';
-import { useNavigate } from 'react-router-dom';
-import Button from '../common/Button';
+import { motion } from "framer-motion";
+import { FiGithub, FiExternalLink, FiCode } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import Button from "../common/Button";
 
 const ProjectCard = ({ project, index }) => {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ const ProjectCard = ({ project, index }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1 }}
+      transition={{ delay: 0.1 }}
       className="group relative bg-white dark:bg-dark-light rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-primary dark:hover:border-primary transition-all duration-300 hover:shadow-2xl"
     >
       {/* Project Image */}
@@ -27,7 +27,7 @@ const ProjectCard = ({ project, index }) => {
             <FiCode className="w-16 h-16 text-primary opacity-50" />
           </div>
         )}
-        
+
         {/* Overlay on Hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
           <div className="flex gap-3">
@@ -36,7 +36,7 @@ const ProjectCard = ({ project, index }) => {
                 variant="primary"
                 size="sm"
                 icon={<FiExternalLink />}
-                onClick={() => window.open(project.liveLink, '_blank')}
+                onClick={() => window.open(project.liveLink, "_blank")}
               >
                 Live Demo
               </Button>
@@ -46,7 +46,7 @@ const ProjectCard = ({ project, index }) => {
                 variant="outline"
                 size="sm"
                 icon={<FiGithub />}
-                onClick={() => window.open(project.githubLink, '_blank')}
+                onClick={() => window.open(project.githubLink, "_blank")}
                 className="bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-gray-900"
               >
                 Code

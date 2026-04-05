@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { STATS } from '@/utils/constants';
-import { animateValue } from '@/utils/helpers';
-import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { STATS } from "@/utils/constants";
+import { animateValue } from "@/utils/helpers";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const About = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.3 });
   const [animatedStats, setAnimatedStats] = useState(
-    STATS.map(stat => ({ ...stat, currentValue: 0 }))
+    STATS.map((stat) => ({ ...stat, currentValue: 0 })),
   );
 
   useEffect(() => {
     if (isVisible) {
       animatedStats.forEach((stat, index) => {
-        animateValue(0, stat.value, 2000, (value) => {
-          setAnimatedStats(prev => {
+        animateValue(0, stat.value, 1000, (value) => {
+          setAnimatedStats((prev) => {
             const newStats = [...prev];
             newStats[index] = { ...newStats[index], currentValue: value };
             return newStats;
@@ -25,7 +25,11 @@ const About = () => {
   }, [isVisible]);
 
   return (
-    <section id="about" className="section-padding bg-white dark:bg-dark" ref={ref}>
+    <section
+      id="about"
+      className="section-padding bg-white dark:bg-dark"
+      ref={ref}
+    >
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,27 +55,43 @@ const About = () => {
           >
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
               <p className="text-lg leading-relaxed">
-                I'm currently pursuing my <strong className="text-primary dark:text-primary-light">MCA in AI & ML</strong> (final semester) 
-                and am an aspiring <strong className="text-primary dark:text-primary-light">DevOps Engineer</strong> with a strong foundation 
-                in full-stack web development.
+                I'm currently pursuing my{" "}
+                <strong className="text-primary dark:text-primary-light">
+                  MCA in AI & ML
+                </strong>{" "}
+                (final semester) and am an aspiring{" "}
+                <strong className="text-primary dark:text-primary-light">
+                  DevOps Engineer
+                </strong>{" "}
+                with a strong foundation in full-stack web development.
               </p>
-              
+
               <p className="text-lg leading-relaxed">
-                My journey began with building full-stack applications using the <strong>MERN stack</strong>, 
-                where I developed and deployed over 5+ production-ready websites including e-commerce platforms, 
+                My journey began with building full-stack applications using the{" "}
+                <strong>MERN stack</strong>, where I developed and deployed over
+                5+ production-ready websites including e-commerce platforms,
                 blogging systems, and complex web applications.
               </p>
 
               <p className="text-lg leading-relaxed">
-                Currently, I'm diving deep into <strong className="text-secondary dark:text-secondary-light">DevOps practices</strong>, 
-                learning containerization with Docker and Kubernetes, implementing CI/CD pipelines with Jenkins and GitHub Actions, 
+                Currently, I'm diving deep into{" "}
+                <strong className="text-secondary dark:text-secondary-light">
+                  DevOps practices
+                </strong>
+                , learning containerization with Docker and Kubernetes,
+                implementing CI/CD pipelines with Jenkins and GitHub Actions,
                 and exploring Infrastructure as Code with Terraform.
               </p>
 
               <p className="text-lg leading-relaxed">
-                I'm passionate about <strong className="text-accent dark:text-accent-light">automation</strong>, 
-                cloud infrastructure, and building scalable systems. My goal is to bridge the gap between development 
-                and operations, creating efficient deployment pipelines and robust infrastructure.
+                I'm passionate about{" "}
+                <strong className="text-accent dark:text-accent-light">
+                  automation
+                </strong>
+                , cloud infrastructure, and building scalable systems. My goal
+                is to bridge the gap between development and operations,
+                creating efficient deployment pipelines and robust
+                infrastructure.
               </p>
             </div>
 
@@ -83,10 +103,10 @@ const About = () => {
               </h3>
               <ul className="space-y-2">
                 {[
-                  'Kubernetes & Container Orchestration',
-                  'AWS Cloud Services & Architecture',
-                  'Terraform & Infrastructure as Code',
-                  'CI/CD Pipeline Optimization',
+                  "Kubernetes & Container Orchestration",
+                  "AWS Cloud Services & Architecture",
+                  "Terraform & Infrastructure as Code",
+                  "CI/CD Pipeline Optimization",
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -124,7 +144,8 @@ const About = () => {
                   className="p-6 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 rounded-xl border border-primary/20 dark:border-primary/30 text-center"
                 >
                   <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
-                    {stat.currentValue}{stat.suffix}
+                    {stat.currentValue}
+                    {stat.suffix}
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
                     {stat.label}
