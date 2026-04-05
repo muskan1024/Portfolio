@@ -32,7 +32,7 @@ export const SITE_INFO = {
 // Typing Animation Texts
 export const TYPING_TEXTS = [
   "Aspiring DevOps Engineer",
-  "Full Stack Developer",
+  "Full Stack Website Developer",
   "MCA (AI & ML) Student",
   "Cloud Enthusiast",
 ];
