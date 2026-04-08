@@ -2,9 +2,9 @@
 export const SOCIAL_LINKS = {
   github: "https://github.com/muskan1024",
   linkedin: "https://www.linkedin.com/in/muskanshaikh1024/",
-  twitter: "https://twitter.com/yourusername",
+  // twitter: "https://twitter.com/yourusername",
   email: "mailto:shaikhmuskan1024@gmail.com",
-  instagram: "https://instagram.com/yourusername",
+  // instagram: "https://instagram.com/yourusername",
 };
 
 // Contact Information

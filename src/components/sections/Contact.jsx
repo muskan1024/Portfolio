@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
-import { CONTACT_INFO } from '@/utils/constants';
-import ContactForm from '../ui/ContactForm';
+import { motion } from "framer-motion";
+import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { CONTACT_INFO } from "@/utils/constants";
+import ContactForm from "../ui/ContactForm";
 
 const Contact = () => {
   return (
@@ -35,7 +35,8 @@ const Contact = () => {
                 Get in Touch
               </h3>
               <p className="text-gray-600 dark:text-gray-400 mb-8">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision.
               </p>
             </div>
 
@@ -50,8 +51,12 @@ const Contact = () => {
                   <FiMail className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                  <p className="font-semibold text-gray-900 dark:text-white">{CONTACT_INFO.email}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Email
+                  </p>
+                  <p className="font-semibold text-gray-900 dark:text-white">
+                    {CONTACT_INFO.email}
+                  </p>
                 </div>
               </motion.a>
 
@@ -63,12 +68,16 @@ const Contact = () => {
                   <FiMapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
-                  <p className="font-semibold text-gray-900 dark:text-white">{CONTACT_INFO.location}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Location
+                  </p>
+                  <p className="font-semibold text-gray-900 dark:text-white">
+                    {CONTACT_INFO.location}
+                  </p>
                 </div>
               </motion.div>
 
-              {CONTACT_INFO.phone && (
+              {/* {CONTACT_INFO.phone && (
                 <motion.a
                   href={`tel:${CONTACT_INFO.phone}`}
                   whileHover={{ x: 10 }}
@@ -82,7 +91,7 @@ const Contact = () => {
                     <p className="font-semibold text-gray-900 dark:text-white">{CONTACT_INFO.phone}</p>
                   </div>
                 </motion.a>
-              )}
+              )} */}
             </div>
 
             {/* Availability Status */}

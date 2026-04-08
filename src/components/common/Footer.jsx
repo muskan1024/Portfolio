@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
-import { 
-  FiGithub, 
-  FiLinkedin, 
-  FiTwitter, 
-  FiMail, 
+import { motion } from "framer-motion";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+  FiMail,
   FiArrowUp,
-  FiHeart 
-} from 'react-icons/fi';
-import { FaInstagram } from 'react-icons/fa';
-import { SOCIAL_LINKS, SITE_INFO, NAV_LINKS } from '@/utils/constants';
-import { smoothScrollTo } from '@/utils/helpers';
+  FiHeart,
+} from "react-icons/fi";
+import { FaInstagram } from "react-icons/fa";
+import { SOCIAL_LINKS, SITE_INFO, NAV_LINKS } from "@/utils/constants";
+import { smoothScrollTo } from "@/utils/helpers";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,20 +17,18 @@ const Footer = () => {
   const socialIcons = {
     github: <FiGithub className="w-5 h-5" />,
     linkedin: <FiLinkedin className="w-5 h-5" />,
-    twitter: <FiTwitter className="w-5 h-5" />,
     email: <FiMail className="w-5 h-5" />,
-    instagram: <FaInstagram className="w-5 h-5" />,
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="bg-dark text-gray-300 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid opacity-5" />
-      
+
       <div className="container-custom relative">
         {/* Main Footer Content */}
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -39,9 +37,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold gradient-text">
               {SITE_INFO.name}
             </h3>
-            <p className="text-gray-400">
-              {SITE_INFO.tagline}
-            </p>
+            <p className="text-gray-400">{SITE_INFO.tagline}</p>
             <p className="text-sm text-gray-500">
               Building the future, one line of code at a time.
             </p>
@@ -66,7 +62,9 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Connect With Me</h4>
+            <h4 className="text-lg font-semibold text-white">
+              Connect With Me
+            </h4>
             <div className="flex gap-4">
               {Object.entries(SOCIAL_LINKS).map(([platform, url]) => (
                 <motion.a
@@ -93,7 +91,8 @@ const Footer = () => {
               © {currentYear} {SITE_INFO.name}. All rights reserved.
             </p>
             <p className="text-sm text-gray-500 flex items-center gap-2">
-              Built with React, TailwindCSS & <FiHeart className="text-red-500" />
+              Built with React, TailwindCSS &{" "}
+              <FiHeart className="text-red-500" />
             </p>
           </div>
         </div>
