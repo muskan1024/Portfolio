@@ -1,7 +1,7 @@
 // Format date to readable string
 export const formatDate = (dateString) => {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateString).toLocaleDateString('en-US', options);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(dateString).toLocaleDateString("en-US", options);
 };
 
 // Calculate reading time based on word count
@@ -19,7 +19,7 @@ export const smoothScrollTo = (elementId) => {
     const offsetTop = element.offsetTop - 80; // Accounting for navbar height
     window.scrollTo({
       top: offsetTop,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   }
 };
@@ -33,16 +33,16 @@ export const validateEmail = (email) => {
 // Truncate text to specified length
 export const truncateText = (text, maxLength) => {
   if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength).trim() + '...';
+  return text.substring(0, maxLength).trim() + "...";
 };
 
 // Generate URL-friendly slug from title
 export const generateSlug = (title) => {
   return title
     .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
     .trim();
 };
 
@@ -65,23 +65,24 @@ export const isInViewport = (element) => {
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
 // Get current theme from localStorage
 export const getThemeFromStorage = () => {
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('theme') || 'light';
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("theme");
   }
-  return 'light';
+  return null;
 };
 
 // Save theme to localStorage
 export const saveThemeToStorage = (theme) => {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('theme', theme);
+  if (typeof window !== "undefined") {
+    localStorage.setItem("theme", theme);
   }
 };
 
@@ -91,14 +92,14 @@ export const copyToClipboard = async (text) => {
     await navigator.clipboard.writeText(text);
     return true;
   } catch (err) {
-    console.error('Failed to copy:', err);
+    console.error("Failed to copy:", err);
     return false;
   }
 };
 
 // Format number with commas (e.g., 1000 -> 1,000)
 export const formatNumber = (num) => {
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
 // Get random items from array
@@ -109,8 +110,11 @@ export const getRandomItems = (array, count) => {
 
 // Check if user prefers dark mode
 export const prefersDarkMode = () => {
-  if (typeof window !== 'undefined') {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (typeof window !== "undefined") {
+    return (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
   }
   return false;
 };

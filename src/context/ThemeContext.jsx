@@ -1,23 +1,16 @@
 import { createContext, useState, useEffect } from "react";
-import {
-  getThemeFromStorage,
-  saveThemeToStorage,
-  prefersDarkMode,
-} from "@/utils/helpers";
+import { getThemeFromStorage, saveThemeToStorage } from "@/utils/helpers";
 
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  // const [theme, setTheme] = useState(() => {
-  //   // Initialize theme from localStorage or system preference
-  //   const savedTheme = getThemeFromStorage();
-  //   if (savedTheme) return savedTheme;
-  //   return prefersDarkMode() ? 'dark' : 'light';
-  // });
   const [theme, setTheme] = useState(() => {
-    // Use saved theme if exists, otherwise default to dark
-    return getThemeFromStorage() || "dark";
+    // Initialize theme from localStorage or default to dark
+    const savedTheme = getThemeFromStorage();
+    if (savedTheme) return savedTheme;
+    return "dark"; // Always default to dark theme
   });
+
   useEffect(() => {
     // Apply theme class to document
     const root = document.documentElement;
