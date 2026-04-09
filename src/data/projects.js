@@ -5,7 +5,8 @@ export const projects = [
     shortDescription: "E-commerce platform with cart & payment integration",
     description:
       "A complete e-commerce platform for fashion products featuring user authentication, product catalog with advanced filters, shopping cart functionality, wishlist feature, and secure payment gateway integration using Stripe/Razorpay. Includes admin dashboard for product and order management.",
-    image: "/public/assets/images/projects/FashionCollection.png",
+    image:
+      "https://raw.githubusercontent.com/muskan1024/Portfolio/refs/heads/main/public/assets/images/projects/FashionCollection.png",
     techStack: [
       "React",
       "Node.js",
@@ -45,7 +46,8 @@ export const projects = [
     shortDescription: "Full-featured e-commerce with admin panel",
     description:
       "Comprehensive e-commerce application with a powerful admin dashboard for managing inventory, orders, and users. Features include real-time inventory tracking, order status management, sales analytics, and multi-vendor support.",
-    image: "/public/assets/images/projects/GearUp.png",
+    image:
+      "https://raw.githubusercontent.com/muskan1024/Portfolio/refs/heads/main/public/assets/images/projects/GearUp.png",
     techStack: ["React", "Node.js", "MongoDB", "Express", "Redux", "Chart.js"],
     category: "Web Development",
     liveLink: "https://gearup-in.vercel.app/",

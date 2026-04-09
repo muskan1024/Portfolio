@@ -238,7 +238,7 @@ const Hero = () => {
                     {SITE_INFO.name.charAt(0)}
                   </span> */}
                   <img
-                    src="public/assets/images/IMG-20251120-WA0001.jpg"
+                    src="https://raw.githubusercontent.com/muskan1024/Portfolio/refs/heads/main/public/assets/images/IMG-20251120-WA0001.jpg"
                     alt={SITE_INFO.name}
                     className="w-full h-full object-cover"
                   />
