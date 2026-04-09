@@ -26,10 +26,10 @@ A modern, responsive portfolio website built with React, Vite, and TailwindCSS, 
 
 ## 👤 Author
 
-**Your Name**
+**Muskan Shaikh**
 
-- GitHub: [@yourusername](https://github.com/muskan1024)
-- LinkedIn: [Your Name](https://www.linkedin.com/in/muskanshaikh1024)
+- GitHub: [@muskan1024](https://github.com/muskan1024)
+- LinkedIn: [Muskan Shaikh](https://www.linkedin.com/in/muskanshaikh1024)
 
 ## ⭐ Show Your Support
 
