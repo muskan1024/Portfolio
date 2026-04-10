@@ -17,7 +17,7 @@ export const CONTACT_INFO = {
 
 // Resume Link
 export const RESUME_LINK =
-  "public/assets/resume/Muskan Jakir Shaikh Resume.pdf";
+  "https://raw.githubusercontent.com/muskan1024/Portfolio/refs/heads/main/public/assets/resume/Muskan%20Jakir%20Shaikh%20Resume.pdf";
 
 // Site Information
 export const SITE_INFO = {
