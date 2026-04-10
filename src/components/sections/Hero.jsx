@@ -15,6 +15,8 @@ import {
 } from "@/utils/constants";
 import { smoothScrollTo } from "@/utils/helpers";
 import Button from "../common/Button";
+import { BsFillMouse2Fill } from "react-icons/bs";
+import { FaComputerMouse } from "react-icons/fa6";
 
 const Hero = () => {
   const [typingText, setTypingText] = useState("");
@@ -75,7 +77,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-dark dark:via-dark-light dark:to-dark"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-dark dark:via-dark-light dark:to-dark pt-20"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 bg-grid opacity-30" />
@@ -142,7 +144,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold h-16"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold"
             >
               <span className="gradient-text">
                 {typingText}
@@ -250,11 +252,11 @@ const Hero = () => {
         </div>
 
         {/* Scroll Down Indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <motion.button
             animate={{ y: [0, 10, 0] }}
@@ -263,9 +265,9 @@ const Hero = () => {
             className="flex flex-col items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-light transition-colors"
           >
             <span className="text-sm font-medium">Scroll Down</span>
-            <FiArrowDown className="w-6 h-6" />
+            <FaComputerMouse className="w-6 h-6" />
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

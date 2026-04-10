@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const EnhancedTerminal = () => {
   const [currentCommandIndex, setCurrentCommandIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
+  const [isTyping, setIsTyping] = useState(false);
+  const terminalRef = useRef(null);
+  const [hasStarted, setHasStarted] = useState(false);
   const [completedCommands, setCompletedCommands] = useState([]);
 
   const commands = [
@@ -20,8 +22,8 @@ const EnhancedTerminal = () => {
         "# Core Skills",
         "├── Full Stack Development (MERN)",
         "├── DevOps & Cloud (Docker, K8s, AWS)",
-        "├── CI/CD Pipelines (Jenkins, GitHub Actions)",
-        "└── Infrastructure as Code (Terraform)",
+        // "├── CI/CD Pipelines (Jenkins, GitHub Actions)",
+        // "└── Infrastructure as Code (Terraform)",
       ],
       color: "text-gray-400",
       delay: 1500,
@@ -118,12 +120,37 @@ const EnhancedTerminal = () => {
       return () => clearInterval(typingInterval);
     }
   }, [currentCommandIndex, isTyping]);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setIsTyping(true);
+          setHasStarted(true);
+        }
+      },
+      {
+        threshold: 0.4,
+      },
+    );
 
+    if (terminalRef.current) {
+      observer.observe(terminalRef.current);
+    }
+
+    return () => {
+      if (terminalRef.current) {
+        observer.unobserve(terminalRef.current);
+      }
+    };
+  }, [hasStarted]);
   return (
     <motion.div
+      ref={terminalRef}
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
+      // initial={{ opacity: 0, y: 20 }}
+      // whileInView={{ opacity: 1, y: 0 }}
+      // viewport={{ once: true }}
       className="bg-[#1E1E1E] p-6 md:p-8 rounded-xl border border-gray-700 shadow-2xl font-mono text-sm overflow-hidden"
     >
       {/* Terminal Header */}
