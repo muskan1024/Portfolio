@@ -186,14 +186,14 @@ const Navbar = () => {
               <Button
                 variant="primary"
                 size="sm"
-                icon={<FiDownload />}
-                className="w-full"
-                onClick={() => {
-                  window.open(RESUME_LINK, "_blank");
-                  setIsMenuOpen(false);
-                }}
+                // icon={<FiDownload />}
+                onClick={() =>
+                  (window.location.href =
+                    // "mailto:shaikhmuskan1024@gmail.com?subject=Hiring Inquiry&body=Hello Muskan,%0D%0A%0D%0AI would like to discuss an opportunity with you.")
+                    "mailto:shaikhmuskan1024@gmail.com")
+                }
               >
-                Download Resume
+                Hire Me
               </Button>
             </div>
           </motion.div>
