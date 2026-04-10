@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
-import { experiences } from '@/data/experience';
-import TimelineItem from '../ui/TimelineItem';
+import { motion } from "framer-motion";
+import { experiences } from "@/data/experience";
+import TimelineItem from "../ui/TimelineItem";
 
 const Experience = () => {
   return (
-    <section id="experience" className="section-padding bg-gray-50 dark:bg-dark-light">
+    <section
+      id="experience"
+      className="section-padding bg-gray-50 dark:bg-dark-light"
+    >
       <div className="container-custom">
         {/* Section Header */}
         <motion.div
@@ -27,7 +30,7 @@ const Experience = () => {
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-accent to-secondary" />
 
           {/* Timeline Items */}
-          <div className="space-y-0">
+          <div className="space-y-8">
             {experiences.map((experience, index) => (
               <TimelineItem
                 key={experience.id}
