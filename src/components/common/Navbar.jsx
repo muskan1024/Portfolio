@@ -33,18 +33,20 @@ const Navbar = () => {
 
   const handleNavClick = (path) => {
     const sectionId = path.substring(1);
-    smoothScrollTo(sectionId);
     setIsMenuOpen(false);
+    setTimeout(() => {
+      smoothScrollTo(sectionId);
+    }, 300);
   };
 
-  const downloadFile = (url, fileName) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = fileName; // This forces the download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const downloadFile = (url, fileName) => {
+  //   const link = document.createElement("a");
+  //   link.href = url;
+  //   link.download = fileName; // This forces the download
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   return (
     <motion.nav

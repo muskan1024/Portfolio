@@ -21,7 +21,7 @@ export const RESUME_LINK =
 
 // Site Information
 export const SITE_INFO = {
-  name: "Muskan Shaikh",
+  name: "Muskan Jakir Shaikh",
   title: "DevOps Engineer & Full Stack Developer",
   tagline:
     "Passionate about automation, cloud infrastructure, and designing & building scalable applications",
