@@ -47,7 +47,7 @@ const ProjectDetails = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             ) : (
               <div className="text-6xl gradient-text font-bold">

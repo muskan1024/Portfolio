@@ -61,7 +61,7 @@ const EnhancedTerminal = () => {
     {
       input: "uptime",
       output:
-        "🟢 Status: Looking for opportunities | Continuously working on improving my skills",
+        "🟢 Status: Looking for job opportunities | Continuously working on improving my skills",
       color: "text-emerald-400",
       delay: 1000,
     },
